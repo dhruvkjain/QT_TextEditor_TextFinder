@@ -17,7 +17,7 @@ TextFinder::~TextFinder()
 }
 
 void TextFinder::loadTextFile(){
-    QFile inputFile("C:/Users/dkjai/Documents/QT_desktop_apps_C++/TextFinder/2input.txt");
+    QFile inputFile("absolute_path_to_2input.txt");
     inputFile.open(QIODevice::ReadWrite);
     inputFile.seek(0);
     QTextStream in(&inputFile);
@@ -33,7 +33,7 @@ void TextFinder::loadTextFile(){
 void TextFinder::on_addbtn_clicked()
 {
     QString newString = ui->addtext->text();
-    QFile inputFile("C:/Users/dkjai/Documents/QT_desktop_apps_C++/TextFinder/2input.txt");
+    QFile inputFile("absolute_path_to_2input.txt");
     inputFile.open(QIODevice::ReadWrite);
 
     QTextStream stream(&inputFile);
@@ -51,7 +51,7 @@ void TextFinder::on_addbtn_clicked()
 
 void TextFinder::on_deleteallbtn_clicked()
 {
-    QFile inputFile("C:/Users/dkjai/Documents/QT_desktop_apps_C++/TextFinder/2input.txt");
+    QFile inputFile("absolute_path_to_2input.txt");
     inputFile.open(QIODevice::ReadWrite | QIODevice::Truncate);
     inputFile.close();
 
